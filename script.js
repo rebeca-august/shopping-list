@@ -12,6 +12,13 @@ const LINE_THROUGH = "lineThrough";
 let LIST = [];
 let id = 0;
 
+function reset() {
+    LIST = [];
+    id = 0;
+    list.innerHTML = "";
+}
+
+
 // Show todays date
 const options = { month: "short", weekday: "long", day: "numeric" };
 const today = new Date();
@@ -23,12 +30,12 @@ function addToDo(toDo, id, done, trash) {
     const LINE = done ? LINE_THROUGH : "";
 
     const text = `<li class="item">
-                <i class="far ${DONE} complete" job="complete" id="${id}"></i>
-                <p class="text">${LINE} ${toDo}</p>
-                <i class="far fa-trash-alt" job="delete" id="${id}"></i>
+                <i class="far ${DONE} complete-circle" job="complete" id="${id}"></i>
+                <p class="text ${LINE}">${toDo}</p>
+                <i class="far fa-trash-alt trash-icon" job="delete" id="${id}"></i>
             </li>`;
 
-    list.insertAdjacentHTML("beforeend", text);
+    list.insertAdjacentHTML("afterbegin", text);
 }
 
 document.addEventListener("keyup", function (e) {
@@ -86,8 +93,7 @@ if (data) {
     loadToDo(LIST);
     id = LIST.length;
 } else {
-    LIST = [];
-    id = 0;
+    reset();
 }
 
 function loadToDo(array) {
@@ -98,7 +104,9 @@ function loadToDo(array) {
 
 clear.addEventListener("click", function () {
     localStorage.clear();
-    location.reload();
+    reset();
+
+    // location.reload();
 });
 
 

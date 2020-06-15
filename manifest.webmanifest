@@ -1,0 +1,15 @@
+{
+    "name": "Todo List",
+    "short_name": "Bloom",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "description": "A beautiful todo list",
+    "icons": [
+        {
+            "src": "assets/manifest.png",
+            "sizes": "64x64",
+            "type": "image/png"
+        }
+    ]
+}
