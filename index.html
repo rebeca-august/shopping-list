@@ -1,46 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>to-do-list</title>
 
     <link rel="icon" type="image/png" href="./favicon.ico" />
 
-    <link rel="manifest" href="manifest.webmanifest">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/icon-180x180.png">
-    <meta name=”apple-mobile-web-app-capable” content=”yes”>
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/icons/icon-180x180.png"
+    />
+    <meta name="”apple-mobile-web-app-capable”" content="”yes”" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/fontawesome/css/all.css">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/fontawesome/css/all.css" />
 
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <header>
-            <img class="header-decoration" src="flower.jpeg" alt="flower">
+      <header>
+        <img class="header-decoration" src="flower.jpeg" alt="flower" />
 
-            <div class="clear">
-                <i class="fas fa-sync"></i>
-            </div>
-
-            <div id="date" class="date"></div>
-        </header>
-
-        <div class="content">
-            <ul id="list">
-            </ul>
+        <div class="clear">
+          <i class="fas fa-sync"></i>
         </div>
 
+        <div id="date" class="date"></div>
+      </header>
 
-        <input class="add-item" type="text" id="input" placeholder="Add a to do...">
+      <div class="content">
+        <ul id="list"></ul>
+      </div>
 
+      <input
+        class="add-item"
+        type="text"
+        id="input"
+        placeholder="I need to buy..."
+      />
     </div>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
